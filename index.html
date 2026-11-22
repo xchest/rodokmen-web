@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><meta name="rodokmen-verze" content="c1ead7a9083f1c179abf39699e5b034711c17e12449679387cd77b477b23c67f"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#253c32"><title>Rodinný strom</title>
+<html lang="cs"><head><meta charset="utf-8"><meta name="rodokmen-verze" content="8ed00674d76c6ccc7854cd08eafaad4ad9fae866db351d912801abc2e20a7c2e"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#253c32"><title>Rodinný strom</title>
 <style>
 :root{--paper:#fffdf7;--bg:#f4f1e8;--ink:#25372e;--muted:#696b61;--line:#8a7555;--accent:#386c52}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.45 system-ui,sans-serif;height:100vh;height:100dvh;display:grid;grid-template-rows:auto auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);overflow:hidden}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #c9a949;outline-offset:2px}header{min-width:0;padding:12px max(14px,env(safe-area-inset-right)) 9px max(14px,env(safe-area-inset-left));background:#253c32;color:#fff}h1{margin:0;font:600 23px/1.2 Georgia,serif}.subtitle{font-size:12px;color:#d8e3d8;margin:3px 0 10px}.tabs{display:flex;gap:7px;overflow-x:auto;padding:3px 2px 6px;scrollbar-width:thin}.tabs button{white-space:nowrap;min-height:44px;padding:8px 14px;border:1px solid #64786a;border-radius:20px;background:#304b3d;color:#fff}.tabs button[aria-pressed=true]{background:#e7dcc1;color:#24372b;border-color:#e7dcc1}.bar{display:flex;align-items:center;gap:10px;padding:8px 14px;min-width:0;box-shadow:0 1px 4px #24372b15;z-index:3}.searchbox{position:relative;flex:1;min-width:0;max-width:440px}input{width:100%;min-height:44px;border:1px solid #a8ad9d;border-radius:9px;padding:9px 12px;background:var(--paper);color:var(--ink)}.tools{display:flex;gap:6px;flex-shrink:0}.tools button{min-width:44px;min-height:44px;background:var(--paper);border:1px solid #a8ad9d;border-radius:9px;padding:7px 12px;color:var(--ink)}.viewport{min-width:0;min-height:0;position:relative;overflow:hidden;touch-action:none;background:radial-gradient(#c8ccbd 1px,transparent 1px) 0 0/24px 24px;user-select:none;cursor:grab}.viewport.dragging{cursor:grabbing}.stage{position:absolute;transform-origin:0 0;will-change:transform}.card{position:absolute;width:var(--card-width,228px);height:112px;display:flex;flex-direction:column;background:var(--paper);border:1px solid #b6b9a7;border-radius:13px;padding:9px 12px 8px;box-shadow:0 3px 10px #28352a12;cursor:pointer;overflow:hidden}.card strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font:600 15px/1.18 Georgia,serif;overflow:hidden}.card .date{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:#4f5c4f;font-size:12.5px;line-height:1.25;margin-top:4px;overflow:hidden}.badge{margin-top:auto;padding-top:2px;font-size:10px;line-height:1.2;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}.card.trunk{border:2px solid var(--accent);background:#f7fcf4}.card.match{outline:4px solid #c49d3a}.card.dim{opacity:.25}.card.side{opacity:.6;background:#fbfbf7;border-style:dashed;box-shadow:none}.card.side.far{opacity:.4}.stage.showall .card.side{opacity:1;border-style:solid;background:var(--paper)}.chk{display:inline-flex;align-items:center;gap:4px;font-size:14px;margin-right:6px;white-space:nowrap}.card.side:hover,.card.side:focus{opacity:1}.card.memorial{border-color:#8a6d3b}.card.memorial strong::after{content:' 🕯'}.memorial-note{background:#f6f0e2;border-left:3px solid #8a6d3b;padding:6px 10px;border-radius:6px}.connections{position:absolute;inset:0;overflow:visible;pointer-events:none}.parent{stroke:var(--line);stroke-width:2;fill:none}.couple{stroke:#597b60;stroke-width:2.5;fill:none}.sibling{stroke:#929b9e;stroke-width:1.5;stroke-dasharray:5 5;fill:none}.hint{position:absolute;left:12px;bottom:max(9px,env(safe-area-inset-bottom));background:#fffdf7e8;padding:5px 9px;border-radius:8px;font-size:11px;pointer-events:none;max-width:calc(100% - 24px)}.results{position:absolute;top:100%;left:0;right:0;margin:5px 0 0;padding:5px;list-style:none;background:var(--paper);box-shadow:0 8px 25px #0003;border-radius:10px;max-height:45vh;overflow:auto;z-index:30}.results:empty{display:none}.results button{width:100%;text-align:left;padding:9px;border:0;border-radius:6px;background:transparent;min-height:44px;color:var(--ink)}.results button:hover{background:#e7eddf}.results small{display:block;color:var(--muted)}dialog{border:0;border-radius:18px;padding:0;width:min(560px,calc(100% - 24px));max-height:85dvh;color:var(--ink);background:var(--paper);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#17291f88}.detailhead{position:sticky;top:0;background:var(--paper);border-bottom:1px solid #d8dccf;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}.detailhead h2{margin:0;flex:1;font:600 24px/1.2 Georgia,serif}.close{border:1px solid #a8ad9d;background:transparent;border-radius:50%;min-width:44px;min-height:44px;color:var(--ink)}.detailbody{padding:12px 20px 22px;font-size:15px}.detailbody p{white-space:pre-line;overflow-wrap:anywhere}.detailbody h3{font-size:14px;margin:18px 0 5px}.detailbody a{color:#2c654a;overflow-wrap:anywhere}.source-record{border:1px solid #d8dccf;border-radius:10px;margin:8px 0;background:#fffefb;overflow:hidden}.source-record summary{cursor:pointer;min-height:44px;padding:10px 12px;font-weight:600;overflow-wrap:anywhere}.source-record[open] summary{border-bottom:1px solid #e1e3da}.source-record-body{padding:8px 12px 12px;overflow-wrap:anywhere}.source-meta{margin:0 0 8px;color:var(--muted);font-size:13px}.source-record-body p{margin:6px 0}.relative{border:1px solid #b6b9a7;border-radius:8px;background:#f0f4e9;color:var(--ink);padding:7px 10px;margin:3px;min-height:40px}.empty{padding:20px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .tog{position:absolute;transform:translateX(-50%);z-index:2;min-width:34px;min-height:30px;padding:3px 12px;border:1px solid #8a7555;border-radius:16px;background:#f3ead4;color:#4a3b22;font-size:13px;font-weight:600;white-space:nowrap;box-shadow:0 2px 5px #28352a22}.tog.open{background:var(--paper);color:var(--muted);font-weight:400;padding:2px 10px}.tog:hover{background:#e7dcc1}.hint.gone{display:none}#expandall[hidden]{display:none}
@@ -71,14 +71,37 @@ function layout(b){
  const levels={};ids.forEach(id=>(levels[gen[find(id)]]??=[]).push(id));const pos={},rows={},UL={};
  Object.keys(levels).map(Number).sort((a,b)=>a-b).forEach(level=>{
   const remain=new Set(levels[level]),units=[];
-  // Keep successive families together when a parent had children with two partners.
+  // Keep successive families together when a parent had children with two or more partners.
   const unitOf=new Map();
   for(const [first,second] of couples){
     if(!remain.has(first) || !remain.has(second) || first===second) continue;
     const left=unitOf.get(first) || [first], right=unitOf.get(second) || [second];
-    if(left===right || (left[0]!==first && left.at(-1)!==first) || (right[0]!==second && right.at(-1)!==second)) continue;
-    const group=[...(left.at(-1)===first?left:[...left].reverse()), ...(right[0]===second?right:[...right].reverse())];
-    for(const id of group) unitOf.set(id,group);
+    if(left===right) continue;
+    let group=null;
+    if((left[0]===first || left.at(-1)===first) && (right[0]===second || right.at(-1)===second)){
+      // Zachovej pořadí hlavní dvojice [otec, matka]: připojuje-li se vedlejší partner k levému konci již existující skupiny, vlož ho VLEVO bez obracení!
+      if(left.length>1 && left[0]===first && right.length===1){
+        group=[second,...left];
+      } else if(right.length>1 && right[0]===second && left.length===1){
+        group=[first,...right];
+      } else if(right.length>1 && right.at(-1)===second && left.length===1){
+        group=[...right,first];
+      } else {
+        group=[...(left.at(-1)===first?left:[...left].reverse()), ...(right[0]===second?right:[...right].reverse())];
+      }
+    } else if(right.length===1){
+      const idx=left.indexOf(first);
+      // 3.+ partner (např. Kateřina Procházková u Josefa P32): přidej na vedlejší (ne-hlavní) stranu téže osoby, ne na konec řady.
+      const leftMain=main.has(left[0]), rightMain=main.has(left.at(-1));
+      const putLeft=leftMain!==rightMain ? !leftMain : idx<=left.length/2;
+      group=putLeft ? [second,...left] : [...left,second];
+    } else if(left.length===1){
+      const idx=right.indexOf(second);
+      const leftMain=main.has(right[0]), rightMain=main.has(right.at(-1));
+      const putLeft=leftMain!==rightMain ? !leftMain : idx<=right.length/2;
+      group=putLeft ? [first,...right] : [...right,first];
+    }
+    if(group) for(const id of group) unitOf.set(id,group);
   }
   const placed=new Set();
   for(const id of remain){
@@ -88,7 +111,7 @@ function layout(b){
   const target=u=>{const all=parent.filter(e=>u.includes(e.from)&&pos[e.to]);const mc=all.filter(e=>main.has(e.to));const cs=(mc.length?mc:all).map(e=>pos[e.to].x+W/2);return cs.length?cs.reduce((a,b)=>a+b,0)/cs.length:NaN};
   /* Revize rozmístění 21. 11. 2026: rodiče stojí nad svými dětmi bez křížení. Řadí se podle středu vlastních dětí
      (nikoli středu celého manželského páru, který u dvou rodičovských větví splýval a prohazoval strany). */
-  units.forEach((u,i)=>{if(u.length>1){const t0=target([u[0]]),t1=target([u.at(-1)]);if(t0>t1)units[i]=[...u].reverse()}});
+  units.forEach((u,i)=>{if(u.length>1&&main.has(u[0])&&main.has(u.at(-1))){const t0=target([u[0]]),t1=target([u.at(-1)]);if(t0>t1)units[i]=[...u].reverse()}});
   const tCenter=new Map(units.map(u=>[u,target(u)]));
   const tg=new Map(units.map(u=>[u,tCenter.get(u)-uw(u)/2])),tk=u=>Number.isFinite(tCenter.get(u))?tCenter.get(u):1e12;
   units.sort((a,b)=>tk(a)-tk(b)||Number(b.some(x=>focus.has(x)))-Number(a.some(x=>focus.has(x)))||a.join().localeCompare(b.join(),'cs'));
@@ -125,17 +148,18 @@ function layout(b){
      else sv.push(pos[s].x+W+GAP);
     }));
    } else {
-    // 2) Sourozenci se společným rodičem (např. Barbora Brožková, Kateřina Mejstříková, Bohuslav ml., Marie Procházková):
+    // 2) Sourozenci se společným rodičem (např. Barbora Brožková, Kateřina Mejstříková, Bohuslav ml., Marie Procházková, děti P728/P1458):
     //    udrž je na té straně páru, na které sedí jejich sourozenec z hlavní linie, aby se nekřížily čáry k rodičům!
     const uPars=new Set(u.flatMap(id=>parOf[id]||[]));
+    const uSingleLeaf=u.length===1&&!u.some(id=>(kidsOf[id]||[]).some(k=>pos[k]));
     rowUnits.forEach(su=>{
      if(su===u||su.length<2)return;
      su.forEach((s,idx)=>{
       if(!main.has(s))return;
       const sPars=parOf[s]||[];
       if(!sPars.some(p=>uPars.has(p)))return;
-      if(idx===0){lim=lim||{};lim.max=Math.min(lim.max??1e9,pos[su[0]].x)}
-      else if(idx===su.length-1){lim=lim||{};lim.min=Math.max(lim.min??-1e9,pos[su.at(-1)].x+W)}
+      if(idx===0){lim=lim||{};lim.max=Math.min(lim.max??1e9,pos[su[0]].x);if(uSingleLeaf)sv.push(pos[su[0]].x-uw(u)-GAP)}
+      else if(idx===su.length-1){lim=lim||{};lim.min=Math.max(lim.min??-1e9,pos[su.at(-1)].x+W);if(uSingleLeaf)sv.push(pos[su.at(-1)].x+W+GAP)}
      });
     });
    }
@@ -155,18 +179,32 @@ function layout(b){
   };
   // Zachovej nekřížící se pořadí rodičů podle jejich dětí (childOrd preferuje hlavní linii, aby vedlejší děti nepřetáhly pár)
   const childOrd=u=>{const all=[],mc=[];u.forEach(id=>(kidsOf[id]||[]).forEach(k=>{if(pos[k]){all.push(cxo(k));if(main.has(k))mc.push(cxo(k))}}));const cs=mc.length?mc:all;return cs.length?cs.reduce((a,b)=>a+b,0)/cs.length:NaN};
+  const parCenter=id=>{const ps=(parOf[id]||[]).filter(x=>pos[x]);return ps.length?ps.reduce((s,x)=>s+cxo(x),0)/ps.length:NaN};
   const lv=Object.keys(UL).map(Number).sort((a,b)=>a-b);
   for(let it=0;it<9;it++)(it%2?[...lv].reverse():lv).forEach(level=>{
    const rowUnits=UL[level].map(u=>{
-    if(u.length>2){
+    if(u.length>2&&main.has(u[0])&&main.has(u.at(-1))){
      const k0=(kidsOf[u[0]]||[]).filter(k=>pos[k]).map(cxo),k1=(kidsOf[u.at(-1)]||[]).filter(k=>pos[k]).map(cxo);
      if(k0.length&&k1.length&&(k0.reduce((a,b)=>a+b,0)/k0.length)>(k1.reduce((a,b)=>a+b,0)/k1.length))return [...u].reverse();
+    } else if(u.length===2){
+     // Jednotná orientace párů napříč všemi větvemi (22. 11. 2026):
+     // pokud je partner bez předků (nemá rodiče ani v grafu, a nejde o hlavní pár obou rodičů s rozbalitelnými předky)
+     // a pár nemá děti rozdělené na různé strany, otoč partnera s rodiči na stranu směrem k jeho rodičům (partner bez údajů jde na vnější stranu).
+     const [a,c]=u;
+     const ka=(kidsOf[a]||[]).filter(k=>pos[k]),kc=(kidsOf[c]||[]).filter(k=>pos[k]);
+     const diffKids=ka.length&&kc.length&&(ka.length!==kc.length||ka.some(k=>!kc.includes(k)));
+     const bothMain=main.has(a)&&main.has(c);
+     if(!diffKids&&!bothMain){
+      const pa=parCenter(a),pc=parCenter(c),mid=(cxo(a)+cxo(c))/2;
+      if(Number.isFinite(pa)&&!Number.isFinite(pc)){if(pa>mid+20)return [c,a]}
+      else if(!Number.isFinite(pa)&&Number.isFinite(pc)){if(pc<mid-20)return [c,a]}
+     }
     }
     return u;
    });
    const dm=new Map(rowUnits.map(u=>[u,want(u,rowUnits)]));
    const lm=new Map(rowUnits.map(u=>[u,u.some(x=>main.has(x))?null:sibInfo(u,rowUnits).lim]));
-   const rOrd=u=>{const {sv}=sibInfo(u,rowUnits);if(sv.length&&!u.some(x=>main.has(x)))return dm.get(u)+uw(u)/2;const co=childOrd(u);return Number.isFinite(co)?co:dm.get(u)+uw(u)/2};
+   const rOrd=u=>{const {sv}=sibInfo(u,rowUnits);if(sv.length&&!u.some(x=>main.has(x)))return sv.reduce((a,b)=>a+b,0)/sv.length+uw(u)/2;const co=childOrd(u);return Number.isFinite(co)?co:dm.get(u)+uw(u)/2};
    const pOrd=u=>{const co=childOrd(u);return Number.isFinite(co)?co:pos[u[0]].x+uw(u)/2};
    const out=packRow(rowUnits,u=>dm.get(u),u=>pos[u[0]].x,pOrd,rOrd,u=>lm.get(u));
    UL[level]=out.map(o=>o[0]);rows[level]=UL[level].flat();

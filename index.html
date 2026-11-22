@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><meta name="rodokmen-verze" content="8ed00674d76c6ccc7854cd08eafaad4ad9fae866db351d912801abc2e20a7c2e"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#253c32"><title>Rodinný strom</title>
+<html lang="cs"><head><meta charset="utf-8"><meta name="rodokmen-verze" content="d7118ceca67bb4ab6b530c44e111b93b29710ba3c859985fa23cad5185d3a67d"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#253c32"><title>Rodinný strom</title>
 <style>
 :root{--paper:#fffdf7;--bg:#f4f1e8;--ink:#25372e;--muted:#696b61;--line:#8a7555;--accent:#386c52}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.45 system-ui,sans-serif;height:100vh;height:100dvh;display:grid;grid-template-rows:auto auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);overflow:hidden}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #c9a949;outline-offset:2px}header{min-width:0;padding:12px max(14px,env(safe-area-inset-right)) 9px max(14px,env(safe-area-inset-left));background:#253c32;color:#fff}h1{margin:0;font:600 23px/1.2 Georgia,serif}.subtitle{font-size:12px;color:#d8e3d8;margin:3px 0 10px}.tabs{display:flex;gap:7px;overflow-x:auto;padding:3px 2px 6px;scrollbar-width:thin}.tabs button{white-space:nowrap;min-height:44px;padding:8px 14px;border:1px solid #64786a;border-radius:20px;background:#304b3d;color:#fff}.tabs button[aria-pressed=true]{background:#e7dcc1;color:#24372b;border-color:#e7dcc1}.bar{display:flex;align-items:center;gap:10px;padding:8px 14px;min-width:0;box-shadow:0 1px 4px #24372b15;z-index:3}.searchbox{position:relative;flex:1;min-width:0;max-width:440px}input{width:100%;min-height:44px;border:1px solid #a8ad9d;border-radius:9px;padding:9px 12px;background:var(--paper);color:var(--ink)}.tools{display:flex;gap:6px;flex-shrink:0}.tools button{min-width:44px;min-height:44px;background:var(--paper);border:1px solid #a8ad9d;border-radius:9px;padding:7px 12px;color:var(--ink)}.viewport{min-width:0;min-height:0;position:relative;overflow:hidden;touch-action:none;background:radial-gradient(#c8ccbd 1px,transparent 1px) 0 0/24px 24px;user-select:none;cursor:grab}.viewport.dragging{cursor:grabbing}.stage{position:absolute;transform-origin:0 0;will-change:transform}.card{position:absolute;width:var(--card-width,228px);height:112px;display:flex;flex-direction:column;background:var(--paper);border:1px solid #b6b9a7;border-radius:13px;padding:9px 12px 8px;box-shadow:0 3px 10px #28352a12;cursor:pointer;overflow:hidden}.card strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font:600 15px/1.18 Georgia,serif;overflow:hidden}.card .date{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:#4f5c4f;font-size:12.5px;line-height:1.25;margin-top:4px;overflow:hidden}.badge{margin-top:auto;padding-top:2px;font-size:10px;line-height:1.2;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}.card.trunk{border:2px solid var(--accent);background:#f7fcf4}.card.match{outline:4px solid #c49d3a}.card.dim{opacity:.25}.card.side{opacity:.6;background:#fbfbf7;border-style:dashed;box-shadow:none}.card.side.far{opacity:.4}.stage.showall .card.side{opacity:1;border-style:solid;background:var(--paper)}.chk{display:inline-flex;align-items:center;gap:4px;font-size:14px;margin-right:6px;white-space:nowrap}.card.side:hover,.card.side:focus{opacity:1}.card.memorial{border-color:#8a6d3b}.card.memorial strong::after{content:' 🕯'}.memorial-note{background:#f6f0e2;border-left:3px solid #8a6d3b;padding:6px 10px;border-radius:6px}.connections{position:absolute;inset:0;overflow:visible;pointer-events:none}.parent{stroke:var(--line);stroke-width:2;fill:none}.couple{stroke:#597b60;stroke-width:2.5;fill:none}.sibling{stroke:#929b9e;stroke-width:1.5;stroke-dasharray:5 5;fill:none}.hint{position:absolute;left:12px;bottom:max(9px,env(safe-area-inset-bottom));background:#fffdf7e8;padding:5px 9px;border-radius:8px;font-size:11px;pointer-events:none;max-width:calc(100% - 24px)}.results{position:absolute;top:100%;left:0;right:0;margin:5px 0 0;padding:5px;list-style:none;background:var(--paper);box-shadow:0 8px 25px #0003;border-radius:10px;max-height:45vh;overflow:auto;z-index:30}.results:empty{display:none}.results button{width:100%;text-align:left;padding:9px;border:0;border-radius:6px;background:transparent;min-height:44px;color:var(--ink)}.results button:hover{background:#e7eddf}.results small{display:block;color:var(--muted)}dialog{border:0;border-radius:18px;padding:0;width:min(560px,calc(100% - 24px));max-height:85dvh;color:var(--ink);background:var(--paper);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#17291f88}.detailhead{position:sticky;top:0;background:var(--paper);border-bottom:1px solid #d8dccf;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}.detailhead h2{margin:0;flex:1;font:600 24px/1.2 Georgia,serif}.close{border:1px solid #a8ad9d;background:transparent;border-radius:50%;min-width:44px;min-height:44px;color:var(--ink)}.detailbody{padding:12px 20px 22px;font-size:15px}.detailbody p{white-space:pre-line;overflow-wrap:anywhere}.detailbody h3{font-size:14px;margin:18px 0 5px}.detailbody a{color:#2c654a;overflow-wrap:anywhere}.source-record{border:1px solid #d8dccf;border-radius:10px;margin:8px 0;background:#fffefb;overflow:hidden}.source-record summary{cursor:pointer;min-height:44px;padding:10px 12px;font-weight:600;overflow-wrap:anywhere}.source-record[open] summary{border-bottom:1px solid #e1e3da}.source-record-body{padding:8px 12px 12px;overflow-wrap:anywhere}.source-meta{margin:0 0 8px;color:var(--muted);font-size:13px}.source-record-body p{margin:6px 0}.relative{border:1px solid #b6b9a7;border-radius:8px;background:#f0f4e9;color:var(--ink);padding:7px 10px;margin:3px;min-height:40px}.empty{padding:20px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .tog{position:absolute;transform:translateX(-50%);z-index:2;min-width:34px;min-height:30px;padding:3px 12px;border:1px solid #8a7555;border-radius:16px;background:#f3ead4;color:#4a3b22;font-size:13px;font-weight:600;white-space:nowrap;box-shadow:0 2px 5px #28352a22}.tog.open{background:var(--paper);color:var(--muted);font-weight:400;padding:2px 10px}.tog:hover{background:#e7dcc1}.hint.gone{display:none}#expandall[hidden]{display:none}
@@ -64,10 +64,16 @@ function layout(b){
  const sibsOf={};
  const addSib=(a,c)=>{if(a===c)return;(sibsOf[a]??=[]).includes(c)||sibsOf[a].push(c);(sibsOf[c]??=[]).includes(a)||sibsOf[c].push(a)};
  b.edges.filter(e=>e.kind==='sibling').forEach(e=>addSib(e.from,e.to));
- const focus=new Set(b.focus_ids||[]),trunk=new Set(focus);let more=true;while(more){more=false;parent.forEach(e=>{if(trunk.has(e.to)&&!trunk.has(e.from)){trunk.add(e.from);more=true}})}trunkL=trunk;
+ const focus=new Set(b.focus_ids||[]),trunk=new Set(focus);let more=true;while(more){more=false;parent.forEach(e=>{if(trunk.has(e.to)&&!trunk.has(e.from)){trunk.add(e.from);more=true}})}
  // Hlavní linie ke zvýraznění (AP 8. 11. 2026): přímí předci, Aleš, Pavlína a jejich děti + fokus větve; centrování zůstává podle fokusu.
  // Prázdné main_ids (větev jen z vedlejších osob, např. Šebkovi) = nevyplněno; bez hlavní linie je hlavní celá větev (15. 11. 2026).
  let main=b.main_ids?.length?new Set([...trunk,...b.main_ids].filter(x=>set.has(x))):new Set([...trunk,...ids.filter(x=>/^p\d+$/.test(x)),...parent.filter(e=>['p2','p3'].includes(e.from)).map(e=>e.to)].filter(x=>set.has(x)));if(!main.size)main=new Set(ids);
+ // Jednotná svislá páteř pro všechny větve (22. 11. 2026): chybí-li focus_ids (např. Procházkovi),
+ // vytvoř trunkL z hlavní linie main (nejmladší v main a jejich přímí předci v main), aby hlavní linie držela osu a neodtáhli ji vedlejší sourozenci.
+ if(!trunk.size && main.size){
+  main.forEach(id=>trunk.add(id));
+ }
+ trunkL=trunk;
  const levels={};ids.forEach(id=>(levels[gen[find(id)]]??=[]).push(id));const pos={},rows={},UL={};
  Object.keys(levels).map(Number).sort((a,b)=>a-b).forEach(level=>{
   const remain=new Set(levels[level]),units=[];
@@ -167,19 +173,23 @@ function layout(b){
   };
   const want=(u,rowUnits)=>{
    const v=[];
+   const isMainU=u.some(x=>main.has(x));
    u.forEach((id,j)=>{
     const off=j*(W+G)+W/2;
-    (kidsOf[id]||[]).forEach(k=>{if(pos[k])v.push(cxo(k)-off)});
+    const ks=(kidsOf[id]||[]).filter(k=>pos[k]);
+    const mks=isMainU?ks.filter(k=>main.has(k)):[];
+    (mks.length?mks:ks).forEach(k=>v.push(cxo(k)-off));
     const ps=(parOf[id]||[]).filter(x=>pos[x]);
     if(ps.length)v.push(ps.reduce((s,x)=>s+cxo(x),0)/ps.length-off);
    });
    const {sv}=sibInfo(u,rowUnits);
-   if(sv.length&&!u.some(x=>main.has(x)))return sv.reduce((a,b)=>a+b,0)/sv.length;
+   if(sv.length&&!isMainU)return sv.reduce((a,b)=>a+b,0)/sv.length;
    return v.length?v.reduce((a,b)=>a+b,0)/v.length:pos[u[0]].x;
   };
   // Zachovej nekřížící se pořadí rodičů podle jejich dětí (childOrd preferuje hlavní linii, aby vedlejší děti nepřetáhly pár)
   const childOrd=u=>{const all=[],mc=[];u.forEach(id=>(kidsOf[id]||[]).forEach(k=>{if(pos[k]){all.push(cxo(k));if(main.has(k))mc.push(cxo(k))}}));const cs=mc.length?mc:all;return cs.length?cs.reduce((a,b)=>a+b,0)/cs.length:NaN};
   const parCenter=id=>{const ps=(parOf[id]||[]).filter(x=>pos[x]);return ps.length?ps.reduce((s,x)=>s+cxo(x),0)/ps.length:NaN};
+  const parOrd=u=>{const ps=u.flatMap(id=>(parOf[id]||[]).filter(x=>pos[x]));return ps.length?ps.reduce((s,x)=>s+cxo(x),0)/ps.length:NaN};
   const lv=Object.keys(UL).map(Number).sort((a,b)=>a-b);
   for(let it=0;it<9;it++)(it%2?[...lv].reverse():lv).forEach(level=>{
    const rowUnits=UL[level].map(u=>{
@@ -204,7 +214,7 @@ function layout(b){
    });
    const dm=new Map(rowUnits.map(u=>[u,want(u,rowUnits)]));
    const lm=new Map(rowUnits.map(u=>[u,u.some(x=>main.has(x))?null:sibInfo(u,rowUnits).lim]));
-   const rOrd=u=>{const {sv}=sibInfo(u,rowUnits);if(sv.length&&!u.some(x=>main.has(x)))return sv.reduce((a,b)=>a+b,0)/sv.length+uw(u)/2;const co=childOrd(u);return Number.isFinite(co)?co:dm.get(u)+uw(u)/2};
+   const rOrd=u=>{const {sv}=sibInfo(u,rowUnits);if(sv.length&&!u.some(x=>main.has(x)))return sv.reduce((a,b)=>a+b,0)/sv.length+uw(u)/2;const po=parOrd(u);if(!u.some(x=>main.has(x))&&Number.isFinite(po))return po;const co=childOrd(u);return Number.isFinite(co)?co:dm.get(u)+uw(u)/2};
    const pOrd=u=>{const co=childOrd(u);return Number.isFinite(co)?co:pos[u[0]].x+uw(u)/2};
    const out=packRow(rowUnits,u=>dm.get(u),u=>pos[u[0]].x,pOrd,rOrd,u=>lm.get(u));
    UL[level]=out.map(o=>o[0]);rows[level]=UL[level].flat();

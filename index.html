@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="cs"><head><meta charset="utf-8"><link rel="icon" href="data:,"><meta name="rodokmen-verze" content="f6737ea254f7f8d69ada9e036c0a3650898f59496c768bb4c9d8df62e1987eb9"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#253c32"><title>Rodinný strom</title>
+<html lang="cs"><head><meta charset="utf-8"><link rel="icon" href="data:,"><meta name="rodokmen-verze" content="780f6d0046d481f1f58b133c9307ed1b1f6cc68eb6e7df2cb51ec44e67ba4ef5"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#253c32"><title>Rodinný strom</title>
 <style>
 :root{--paper:#fffdf7;--bg:#f4f1e8;--ink:#25372e;--muted:#696b61;--line:#8a7555;--accent:#386c52}*{box-sizing:border-box}body{margin:0;color:var(--ink);background:var(--bg);font:16px/1.45 system-ui,sans-serif;height:100vh;height:100dvh;display:grid;grid-template-rows:auto auto minmax(0,1fr);grid-template-columns:minmax(0,1fr);overflow:hidden}button,input{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #c9a949;outline-offset:2px}header{min-width:0;padding:12px max(14px,env(safe-area-inset-right)) 9px max(14px,env(safe-area-inset-left));background:#253c32;color:#fff}h1{margin:0;font:600 23px/1.2 Georgia,serif}.subtitle{font-size:12px;color:#d8e3d8;margin:3px 0 10px}.tabs{display:flex;gap:7px;overflow-x:auto;padding:3px 2px 6px;scrollbar-width:thin}.tabs button{white-space:nowrap;min-height:44px;padding:8px 14px;border:1px solid #64786a;border-radius:20px;background:#304b3d;color:#fff}.tabs button[aria-pressed=true]{background:#e7dcc1;color:#24372b;border-color:#e7dcc1}.bar{display:flex;align-items:center;gap:10px;padding:8px 14px;min-width:0;box-shadow:0 1px 4px #24372b15;z-index:3}.searchbox{position:relative;flex:1;min-width:0;max-width:440px}input{width:100%;min-height:44px;border:1px solid #a8ad9d;border-radius:9px;padding:9px 12px;background:var(--paper);color:var(--ink)}.tools{display:flex;gap:6px;flex-shrink:0}.tools button{min-width:44px;min-height:44px;background:var(--paper);border:1px solid #a8ad9d;border-radius:9px;padding:7px 12px;color:var(--ink)}.viewport{min-width:0;min-height:0;position:relative;overflow:hidden;touch-action:none;background:radial-gradient(#c8ccbd 1px,transparent 1px) 0 0/24px 24px;user-select:none;cursor:grab}.viewport.dragging{cursor:grabbing}.stage{position:absolute;transform-origin:0 0;will-change:transform}.card{position:absolute;width:var(--card-width,228px);height:112px;display:flex;flex-direction:column;background:var(--paper);border:1px solid #b6b9a7;border-radius:13px;padding:9px 12px 8px;box-shadow:0 3px 10px #28352a12;cursor:pointer;overflow:hidden}.card strong{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;font:600 15px/1.18 Georgia,serif;overflow:hidden}.card .date{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;color:#4f5c4f;font-size:12.5px;line-height:1.25;margin-top:4px;overflow:hidden}.badge{margin-top:auto;padding-top:2px;font-size:10px;line-height:1.2;letter-spacing:.02em;text-transform:uppercase;color:var(--muted)}.card.trunk{border:2px solid var(--accent);background:#f7fcf4}.card.match{outline:4px solid #c49d3a}.card.dim{opacity:.25}.card.side{opacity:.6;background:#fbfbf7;border-style:dashed;box-shadow:none}.card.side.far{opacity:.4}.stage.showall .card.side{opacity:1;border-style:solid;background:var(--paper)}.chk{display:inline-flex;align-items:center;gap:4px;font-size:14px;margin-right:6px;white-space:nowrap}.card.side:hover,.card.side:focus{opacity:1}.card.memorial{border-color:#8a6d3b}.card.memorial strong::after{content:' 🕯'}.memorial-note{background:#f6f0e2;border-left:3px solid #8a6d3b;padding:6px 10px;border-radius:6px}.connections{position:absolute;inset:0;overflow:visible;pointer-events:none}.parent{stroke:var(--line);stroke-width:2;fill:none}.couple{stroke:#597b60;stroke-width:2.5;fill:none}.sibling{stroke:#929b9e;stroke-width:1.5;stroke-dasharray:5 5;fill:none}.hint{position:absolute;left:12px;bottom:max(9px,env(safe-area-inset-bottom));background:#fffdf7e8;padding:5px 9px;border-radius:8px;font-size:11px;pointer-events:none;max-width:calc(100% - 24px)}.results{position:absolute;top:100%;left:0;right:0;margin:5px 0 0;padding:5px;list-style:none;background:var(--paper);box-shadow:0 8px 25px #0003;border-radius:10px;max-height:45vh;overflow:auto;z-index:30}.results:empty{display:none}.results button{width:100%;text-align:left;padding:9px;border:0;border-radius:6px;background:transparent;min-height:44px;color:var(--ink)}.results button:hover{background:#e7eddf}.results small{display:block;color:var(--muted)}dialog{border:0;border-radius:18px;padding:0;width:min(560px,calc(100% - 24px));max-height:85dvh;color:var(--ink);background:var(--paper);box-shadow:0 20px 70px #0005}dialog::backdrop{background:#17291f88}.detailhead{position:sticky;top:0;background:var(--paper);border-bottom:1px solid #d8dccf;padding:16px 18px;display:flex;gap:12px;align-items:flex-start}.detailhead h2{margin:0;flex:1;font:600 24px/1.2 Georgia,serif}.close{border:1px solid #a8ad9d;background:transparent;border-radius:50%;min-width:44px;min-height:44px;color:var(--ink)}.detailbody{padding:12px 20px 22px;font-size:15px}.detailbody p{white-space:pre-line;overflow-wrap:anywhere}.detailbody h3{font-size:14px;margin:18px 0 5px}.detailbody a{color:#2c654a;overflow-wrap:anywhere}.source-record{border:1px solid #d8dccf;border-radius:10px;margin:8px 0;background:#fffefb;overflow:hidden}.source-record summary{cursor:pointer;min-height:44px;padding:10px 12px;font-weight:600;overflow-wrap:anywhere}.source-record[open] summary{border-bottom:1px solid #e1e3da}.source-record-body{padding:8px 12px 12px;overflow-wrap:anywhere}.source-meta{margin:0 0 8px;color:var(--muted);font-size:13px}.source-record-body p{margin:6px 0}.relative{border:1px solid #b6b9a7;border-radius:8px;background:#f0f4e9;color:var(--ink);padding:7px 10px;margin:3px;min-height:40px}.empty{padding:20px}.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
 .tog{position:absolute;transform:translateX(-50%);z-index:2;min-width:34px;min-height:30px;padding:3px 12px;border:1px solid #8a7555;border-radius:16px;background:#f3ead4;color:#4a3b22;font-size:13px;font-weight:600;white-space:nowrap;box-shadow:0 2px 5px #28352a22}.tog.open{background:var(--paper);color:var(--muted);font-weight:400;padding:2px 10px}.tog:hover{background:#e7dcc1}.hint.gone{display:none}#expandall[hidden],#mainline[hidden]{display:none}.tools button[aria-pressed=true]{background:var(--accent);color:#fff;border-color:#253c32}
@@ -406,6 +406,7 @@ function connections(b){
 const isPar=e=>['father','mother','parent'].includes(e.kind),norm=s=>String(s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();
 const STORE='rodokmen-vetve';let ST={},mainlineOnly=false;try{ST=JSON.parse(localStorage.getItem(STORE)||'{}')||{}}catch(e){ST={}}
 function saveST(){try{localStorage.setItem(STORE,JSON.stringify(ST))}catch(e){}}
+const maidenNorm=p=>{const s=norm(pname(p||{}).replace(/\(.*?\)/g,''));const m=s.match(/\broz(?:ena|\.)\s+(.+)$/);return m?m[1]:s};
 function spineStem(b){
  if(!b||b.unlinked)return null;
  const t=(b.title||'').trim();
@@ -420,7 +421,7 @@ function surnameBranch(full){
  const stems=spineStem(full);if(!stems)return full;
  const set=new Set(full.ids),pOf=parentsOf(full),fatherOf={};
  full.edges.filter(isPar).forEach(e=>{if(e.kind==='father')fatherOf[e.to]=e.from});
- const onSpine=id=>{const n=norm(pname(D.people[id]||{}).replace(/\(.*?\)/g,''));return stems.some(s=>n.includes(s))};
+ const onSpine=id=>{const n=maidenNorm(D.people[id]);return stems.some(s=>n.includes(s))};
  const memo=new Map(),hasAnc=(id,seen=new Set())=>{
   if(memo.has(id))return memo.get(id);
   if(onSpine(id)){memo.set(id,true);return true}
@@ -462,30 +463,31 @@ function surnameBranch(full){
 }
 function mainOf(b){const set=new Set(b.ids),parent=b.edges.filter(isPar),trunk=new Set(b.focus_ids||[]);let more=true;while(more){more=false;parent.forEach(e=>{if(trunk.has(e.to)&&!trunk.has(e.from)){trunk.add(e.from);more=true}})}const m=b.main_ids?.length?new Set([...trunk,...b.main_ids].filter(x=>set.has(x))):new Set([...trunk,...b.ids.filter(x=>/^p\d+$/.test(x)),...parent.filter(e=>['p2','p3'].includes(e.from)).map(e=>e.to)].filter(x=>set.has(x)));return m.size?m:new Set(b.ids)}
 function parentsOf(b){const o={};b.edges.filter(isPar).forEach(e=>(o[e.to]??=[]).push(e.from));return o}
-function defaultsFor(b){const out=new Set(),t=b.title||'';if(/\s/.test(t.trim())||!/ovi$/.test(t))return out;const stem=norm(t.replace(/ovi$/,'')),stemE=stem.replace(/([bcdfghjklmnprstvzšřčž])$/,'e$1'),pOf=parentsOf(b),onSpine=id=>{const n=norm(pname(D.people[id]||{}).replace(/\(.*?\)/g,''));return n.includes(stem)||n.includes(stemE)};/* pohyblivé e (Šebkovi → Šebek), revize 21. 11. 2026 */Object.values(pOf).forEach(ps=>{if(ps.some(onSpine))ps.forEach(p=>{if(!onSpine(p)&&pOf[p])out.add(p)})});return out}
-/* Revize 26. 11. 2026: sbalit lze jakoukoli osobu s předky, jejíž sbalení skryje alespoň jednoho předka a zachová souvislost větve (neroztrhne strom – funguje i při implexu). */
+function defaultsFor(b){const out=new Set(),t=b.title||'';if(/\s/.test(t.trim())||!/ovi$/.test(t))return out;const stem=norm(t.replace(/ovi$/,'')),stemE=stem.replace(/([bcdfghjklmnprstvzšřčž])$/,'e$1'),pOf=parentsOf(b),onSpine=id=>{const n=maidenNorm(D.people[id]);return n.includes(stem)||n.includes(stemE)};/* pohyblivé e (Šebkovi → Šebek), revize 21. 11. 2026; rodné příjmení „roz. …“, revize 28. 11. 2026 */Object.values(pOf).forEach(ps=>{if(ps.some(onSpine))ps.forEach(p=>{if(!onSpine(p)&&pOf[p])out.add(p)})});return out}
+/* Revize 28. 11. 2026: sbalit lze jakoukoli osobu s předky, jejíž sbalení skryje alespoň jednoho předka a zachová souvislost větve; coreM vylučuje nepředkovské partnery s vedlejšími dětmi jako falešné kořeny. */
 const _foldCache=new WeakMap();
 function canFold(b,id){
  if(_foldCache.has(b))return _foldCache.get(b).has(id);
  const n=b.ids.length,idx=new Map(),pIdx=Array.from({length:n},()=>[]),adj=Array.from({length:n},()=>[]);
  b.ids.forEach((x,i)=>idx.set(x,i));
- const mainSet=mainOf(b),mainM=new Uint8Array(n),hasChM=new Uint8Array(n),inParM=new Uint8Array(n);
+ const mainSet=mainOf(b),focusSet=new Set(b.focus_ids||[]),mainM=new Uint8Array(n),hasChM=new Uint8Array(n),hasMainParM=new Uint8Array(n),coreM=new Uint8Array(n);
  b.ids.forEach((x,i)=>{if(mainSet.has(x))mainM[i]=1});
  for(const e of b.edges){
   const u=idx.get(e.from),v=idx.get(e.to);if(u===undefined||v===undefined)continue;
   adj[u].push(v);adj[v].push(u);
-  if(isPar(e)){pIdx[v].push(u);inParM[u]=1;inParM[v]=1;if(mainM[v])hasChM[u]=1}
+  if(isPar(e)){pIdx[v].push(u);if(mainM[v])hasChM[u]=1;if(mainM[u])hasMainParM[v]=1}
  }
+ for(let i=0;i<n;i++)if(mainM[i]&&(focusSet.has(b.ids[i])||hasChM[i]||hasMainParM[i]))coreM[i]=1;
  const cntC=(keep)=>{const seen=new Uint8Array(n);let c=0,q=[];for(let s=0;s<n;s++){if((keep&&!keep[s])||seen[s])continue;c++;seen[s]=1;q=[s];for(let qi=0;qi<q.length;qi++)for(const w of adj[q[qi]])if((!keep||keep[w])&&!seen[w]){seen[w]=1;q.push(w)}}return c};
  const baseC=cntC(null),roots=[];
- for(let i=0;i<n;i++)if(mainM[i]&&!hasChM[i]&&inParM[i])roots.push(i);
+ for(let i=0;i<n;i++)if(coreM[i]&&!hasChM[i])roots.push(i);
  const looseSeen=new Uint8Array(n),looseComps=[];
  for(let i=0;i<n;i++){
-  if(looseSeen[i]||(mainM[i]&&inParM[i]))continue;
+  if(looseSeen[i]||coreM[i])continue;
   const nodes=[i],touch=[],tSeen=new Set();let linked=false;looseSeen[i]=1;
   for(let qi=0;qi<nodes.length;qi++)for(const w of adj[nodes[qi]]){
    linked=true;
-   if(!mainM[w]||!inParM[w]){if(!looseSeen[w]){looseSeen[w]=1;nodes.push(w)}}
+   if(!coreM[w]){if(!looseSeen[w]){looseSeen[w]=1;nodes.push(w)}}
    else if(!tSeen.has(w)){tSeen.add(w);touch.push(w)}
   }
   looseComps.push({nodes,touch,linked});
@@ -495,7 +497,7 @@ function canFold(b,id){
   if(!pIdx[cand].length)continue;
   const vis=new Uint8Array(n),st=[];
   for(const r of roots){vis[r]=1;st.push(r)}
-  for(let qi=0;qi<st.length;qi++){const u=st[qi];if(u===cand)continue;for(const p of pIdx[u])if(mainM[p]&&!vis[p]){vis[p]=1;st.push(p)}}
+  for(let qi=0;qi<st.length;qi++){const u=st[qi];if(u===cand)continue;for(const p of pIdx[u])if(coreM[p]&&!vis[p]){vis[p]=1;st.push(p)}}
   for(const lc of looseComps)if(!lc.linked||lc.touch.some(m=>vis[m]))for(const u of lc.nodes)vis[u]=1;
   let vc=0;for(let i=0;i<n;i++)if(vis[i])vc++;
   if(vc<n&&cntC(vis)<=baseC)ok.add(b.ids[cand]);
@@ -504,11 +506,10 @@ function canFold(b,id){
  return ok.has(id);
 }
 function collapsedFor(key,b){const s=ST[key]||{},c=defaultsFor(b);(s.closed||[]).forEach(x=>c.add(x));(s.open||[]).forEach(x=>c.delete(x));for(const x of [...c])if(!canFold(b,x))c.delete(x);return c}
-function prune(full){const c=collapsedFor(branch,full);if(!c.size)return full;const main=mainOf(full);if(!main.size)return full;const pOf=parentsOf(full),hasChild=new Set(full.edges.filter(e=>isPar(e)&&main.has(e.to)).map(e=>e.from)),vis=new Set(),inPar=new Set(full.edges.filter(isPar).flatMap(e=>[e.from,e.to])),stack=[...main].filter(x=>!hasChild.has(x)&&inPar.has(x));stack.forEach(x=>vis.add(x));
- // Revize 21. 11. 2026: osoba bez rodičovské hrany (jen manžel/sourozenec, např. druhá žena) není „nejmladší list“ – zobrazí se jen s viditelným partnerem, jinak visela osamoceně v horní řadě.
- while(stack.length){const id=stack.pop();if(c.has(id))continue;(pOf[id]||[]).forEach(p=>{if(main.has(p)&&!vis.has(p)){vis.add(p);stack.push(p)}})}
+function prune(full){const c=collapsedFor(branch,full);if(!c.size)return full;const main=mainOf(full);if(!main.size)return full;const pOf=parentsOf(full),focusSet=new Set(full.focus_ids||[]),hasChild=new Set(full.edges.filter(e=>isPar(e)&&main.has(e.to)).map(e=>e.from)),hasMainPar=new Set(full.edges.filter(e=>isPar(e)&&main.has(e.from)).map(e=>e.to)),core=new Set([...main].filter(x=>focusSet.has(x)||hasChild.has(x)||hasMainPar.has(x))),vis=new Set(),stack=[...core].filter(x=>!hasChild.has(x));stack.forEach(x=>vis.add(x));
+ while(stack.length){const id=stack.pop();if(c.has(id))continue;(pOf[id]||[]).forEach(p=>{if(core.has(p)&&!vis.has(p)){vis.add(p);stack.push(p)}})}
  const adj={};full.edges.forEach(e=>{(adj[e.from]??=[]).push(e.to);(adj[e.to]??=[]).push(e.from)});const seen=new Set();
- const loose=x=>!main.has(x)||!inPar.has(x);
+ const loose=x=>!core.has(x);
  full.ids.filter(loose).forEach(s=>{if(seen.has(s))return;const comp=[s];seen.add(s);let touch=false,linked=false;for(let i=0;i<comp.length;i++)for(const n of adj[comp[i]]||[]){linked=true;if(loose(n)){if(!seen.has(n)){seen.add(n);comp.push(n)}}else if(vis.has(n))touch=true}if(touch||!linked)comp.forEach(x=>vis.add(x))});
  return{...full,ids:full.ids.filter(x=>vis.has(x)),edges:full.edges.filter(e=>vis.has(e.from)&&vis.has(e.to))}}
 function toggles(b){if(mainlineOnly&&spineStem(D.branches[branch]))return '';const full=D.branches[branch],c=collapsedFor(branch,full),pOf=parentsOf(full),cnt=id=>{const s=new Set(),st=[id];while(st.length)for(const p of pOf[st.pop()]||[])if(!s.has(p)){s.add(p);st.push(p)}return s.size},word=n=>n===1?'předek':n<5?'předci':'předků';
